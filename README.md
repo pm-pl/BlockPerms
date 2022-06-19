@@ -17,7 +17,7 @@ PocketMine-MP API 4.0.0 and PHP 8 or PHP 7
 
 ## Permissions
 
-**Reload**: Permission To Reload The Plugin ***blockperms.reload***
+**Reload**: Permission To Reload The Plugin -> ***blockperms.reload***
 
 **Bypass**: Permission to Bypass The Block Check -> ***bypass.permission***
 
