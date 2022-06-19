@@ -1,0 +1,32 @@
+---
+#  ____  _            _      _____                        
+# |  _ \| |          | |    |  __ \                       
+# | |_) | | ___   ___| | __ | |__) |__ _ __ _ __ ___  ___ 
+# |  _ <| |/ _ \ / __| |/ / |  ___/ _ \ '__| '_ ` _ \/ __|
+# | |_) | | (_) | (__|   <  | |  |  __/ |  | | | | | \__ \
+# |____/|_|\___/ \___|_|\_\ |_|   \___|_|  |_| |_| |_|___/
+#                                                         
+#                      By HenryDM                                                         
+
+
+#Prefix Of The Plugin - You can change
+prefix: "§f[§bBlockPerms§f]§r"
+
+#Reloaded Message - You can Change 
+reloaded: "§aBlockPerms has been successfully reloaded!"
+
+# Set this to false if you don't want to send a message to the player if they place or break a locked block
+alert-message: true
+
+#Message Message when player put and break banned blocks
+#Protip: Use %block%  to add block name
+place-message: "§cYou don't have permission to place this block!"
+break-message: "§cYou don't have permission to break this block!"
+
+#Banned Blocks list
+#Protip: Use Block Names with CAPS_LOCK
+#Protip: Blocks With UNDERLINE doesn't work to stop it from breaking, it's not a bug but a property of pocketmine I think! 
+blocks:
+  - TNT 
+  - DIAMOND_BLOCK
+...

@@ -1,0 +1,22 @@
+name: BlockPerms
+main: HenryDM\BlockPerms\Main
+api: [4.0.0]
+version: 2.1.0
+author: HenryDM
+description: Advanced plugin to prevent players from placing and breaking specific blocks
+website: https://github.com/Henry12960
+
+commands:
+  bpreload:
+    description: Reload The Plugin Config
+    default: op 
+    permission: blockperms.reload
+permissions:
+  bypass.permission:
+    description: ByPass The Block Check
+    default: op 
+  blockperms.reload:
+    description: Reload Plugin Configurations
+    default: op 
+  
+
