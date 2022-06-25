@@ -12,7 +12,7 @@ commands:
     default: op 
     permission: blockperms.reload
 permissions:
-  bypass.permission:
+  blockperms.bypass:
     description: ByPass The Block Check
     default: op 
   blockperms.reload:
