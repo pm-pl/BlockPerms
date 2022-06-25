@@ -47,7 +47,7 @@ class Main extends PluginBase implements Listener {
         $bl = $event->getItem();
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
-        if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("bypass.permission")) {
+        if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
             if ($this->cfg->get("alert-message")) {
                 $player->sendMessage($this->cfg->get("prefix") . " " . str_replace("%block%", $event->getBlock()->getName(), $this->cfg->get("place-message")));
             }
@@ -62,7 +62,7 @@ class Main extends PluginBase implements Listener {
         $bl = $event->getItem();
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
-        if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("bypass.permission")) {
+        if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
             if ($this->cfg->get("alert-message")) {
                 $player->sendMessage($this->cfg->get("prefix") . " " . str_replace("%block%", $event->getBlock()->getName(), $this->cfg->get("break-message")));
             }
