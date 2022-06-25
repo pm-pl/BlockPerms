@@ -23,14 +23,6 @@ class Main extends PluginBase implements Listener {
 
     public function onEnable() : void {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);		
-                $this->getServer()->getLogger()->info("  ____  _            _      _____                         ");
-		$this->getServer()->getLogger()->info(" |  _ \| |          | |    |  __ \                        ");
-		$this->getServer()->getLogger()->info(" | |_) | | ___   ___| | __ | |__) |__ _ __ _ __ ___  ___  ");
-		$this->getServer()->getLogger()->info(" |  _ <| |/ _ \ / __| |/ / |  ___/ _ \ '__| '_ ` _ \/ __| ");
-	 	$this->getServer()->getLogger()->info(" | |_) | | (_) | (__|   <  | |  |  __/ |  | | | | | \__ \ ");
-	        $this->getServer()->getLogger()->info(" |____/|_|\___/ \___|_|\_\ |_|   \___|_|  |_| |_| |_|___/ ");
-	        $this->getServer()->getLogger()->info("");
-		$this->getServer()->getLogger()->info("[BlockPerms] Plugin Enable - By HenryDM");
 		$this->saveResource("config.yml");
         $this->cfg = new Config($this->getDataFolder() . "config.yml");
     }
