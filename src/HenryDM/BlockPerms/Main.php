@@ -50,19 +50,18 @@ class Main extends PluginBase implements Listener {
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
         if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
-            if($config("alert-message") === "true")) {
+            if($config("alert-message") === "true") {
               if($config("place-mode") === "message") { 
                 $player->sendMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("place-message")));
                  if($config("place-mode") === "popup") { 
                    $player->sendActionBarMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("place-message")));
-             }
-           }
-         }
-       }
+              }
+            }
+          }
+        }
             $event->cancel();
-     }
+      }
    }
- }
 
     public function onBreak(BlockBreakEvent $event): void { 
 	$config = $this->cfg->get();
@@ -72,17 +71,16 @@ class Main extends PluginBase implements Listener {
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
         if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
-            if($config("alert-message") === "true")) {
+            if($config("alert-message") === "true") {
               if($config("break-mode") === "message") { 
                 $player->sendMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
                  if($config("break-mode") === "popup") { 
                    $player->sendActionBarMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
-               }
-             }
-           }
-         }
+              }
+            }
+          }
+        }
             $event->cancel();
       }
-    }
-  }
-}
+   }
+ }
