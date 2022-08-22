@@ -62,7 +62,7 @@ class Main extends PluginBase implements Listener {
             $event->cancel();
       }
    }
-
+ }
     public function onBreak(BlockBreakEvent $event): void { 
 	$config = $this->cfg->get();
         $player = $event->getPlayer();
