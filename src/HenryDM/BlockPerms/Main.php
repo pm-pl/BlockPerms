@@ -22,8 +22,9 @@ class Main extends PluginBase implements Listener {
     private $cfg;
 
     public function onEnable() : void {
-        $this->getServer()->getPluginManager()->registerEvents($this, $this);		
-		$this->saveResource("config.yml");
+
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);		 
+        $this->saveResource("config.yml");
         $this->cfg = new Config($this->getDataFolder() . "config.yml");
     }
 
@@ -59,8 +60,9 @@ class Main extends PluginBase implements Listener {
          }
        }
             $event->cancel();
-    }
-  }
+     }
+   }
+ }
 
     public function onBreak(BlockBreakEvent $event): void { 
 	$config = $this->cfg->get();
@@ -75,11 +77,12 @@ class Main extends PluginBase implements Listener {
                 $player->sendMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
                  if($config("break-mode") === "popup") { 
                    $player->sendActionBarMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
+               }
              }
            }
          }
-       }
             $event->cancel();
+      }
     }
   }
 }
