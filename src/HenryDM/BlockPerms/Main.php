@@ -33,7 +33,7 @@ class Main extends PluginBase implements Listener {
             case "bpreload":
             {
                 $this->cfg->reload();
-                $sender->sendMessage($this->cfg->get("prefix") . " " . $this->cfg->get("reloaded"));
+                $sender->sendMessage($this->cfg->get("prefix") . " " . $this->cfg->get("reload-message"));
                 break;
             }
         }
@@ -41,34 +41,45 @@ class Main extends PluginBase implements Listener {
         return true;
     }
 
-    public function onBlockPlace(BlockPlaceEvent $event): void { 
-	
+    public function onPlace(BlockPlaceEvent $event): void { 
+	$config = $this->cfg->get();
         $player = $event->getPlayer();
         $bl = $event->getItem();
+        $block = $event ->get lock()->getName();
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
         if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
-            if ($this->cfg->get("alert-message")) {
-                $player->sendMessage($this->cfg->get("prefix") . " " . str_replace("%block%", $event->getBlock()->getName(), $this->cfg->get("place-message")));
-            }
-
+            if($config("alert-message" === "true")) {
+              if($config("place-mode" ==== "message") { 
+                $player->sendMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("place-message")));
+                 if($config("place-mode" === "popup") { 
+                   $player->sendActionBarMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("place-message")));
+             }
+           }
+         }
+       }
             $event->cancel();
-        }
     }
-	
-	public function onBlockBreak(BlockBreakEvent $event): void { 
-	
+  }
+
+    public function onBreak(BlockBreakEvent $event): void { 
+	$config = $this->cfg->get();
         $player = $event->getPlayer();
         $bl = $event->getItem();
+        $block = $event ->get lock()->getName();
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
         if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
-            if ($this->cfg->get("alert-message")) {
-                $player->sendMessage($this->cfg->get("prefix") . " " . str_replace("%block%", $event->getBlock()->getName(), $this->cfg->get("break-message")));
-            }
-
+            if($config("alert-message" === "true")) {
+              if($config("break-mode" ==== "message") { 
+                $player->sendMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
+                 if($config("break-mode" === "popup") { 
+                   $player->sendActionBarMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
+             }
+           }
+         }
+       }
             $event->cancel();
-        }
-	}
-	
+    }
+  }
 }
