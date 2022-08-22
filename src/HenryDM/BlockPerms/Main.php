@@ -45,7 +45,7 @@ class Main extends PluginBase implements Listener {
 	$config = $this->cfg->get();
         $player = $event->getPlayer();
         $bl = $event->getItem();
-        $block = $event ->get lock()->getName();
+        $block = $event->getBlock()->getName();
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
         if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
@@ -66,7 +66,7 @@ class Main extends PluginBase implements Listener {
 	$config = $this->cfg->get();
         $player = $event->getPlayer();
         $bl = $event->getItem();
-        $block = $event ->get lock()->getName();
+        $block = $event->getBlock()->getName();
         $name = str_replace(" ", "_", strtoupper($bl->getName()));
 
         if (in_array($name, $this->cfg->get("blocks")) && !$player->hasPermission("blockperms.bypass")) {
