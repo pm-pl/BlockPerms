@@ -5,28 +5,34 @@
 # |  _ <| |/ _ \ / __| |/ / |  ___/ _ \ '__| '_ ` _ \/ __|
 # | |_) | | (_) | (__|   <  | |  |  __/ |  | | | | | \__ \
 # |____/|_|\___/ \___|_|\_\ |_|   \___|_|  |_| |_| |_|___/
-#                                                         
-#                      By HenryDM                                                         
+#                                                                                                        
+# If you want report bugs: https://github.com/Henry12960/BlockPerms/issues
 
+# ========================
+#    General Messages
+# ========================
 
-#Prefix Of The Plugin - You can change
-prefix: "§f[§bBlockPerms§f]§r"
-
-#Reloaded Message - You can Change 
-reloaded: "§aBlockPerms has been successfully reloaded!"
-
-# Set this to false if you don't want to send a message to the player if they place or break a locked block
+# Warning message if blocked break or placing blocks
 alert-message: true
 
-#Message Message when player put and break banned blocks
-#Protip: Use %block%  to add block name
-place-message: "§cYou don't have permission to place this block!"
-break-message: "§cYou don't have permission to break this block!"
+# If you set to true add Place and Break messages
+place-message: "§cYou can't put it here!"
+break-message: "§cYou can't break it here!"
 
-#Banned Blocks list
-#Protip: Use Block Names with CAPS_LOCK
-#Protip: Blocks With UNDERLINE doesn't work to stop it from breaking, it's not a bug but a property of pocketmine I think! 
+# ========================
+#   Block and World list 
+# ========================
+
+anti-break-worlds:
+  - Lobby #Example
+  - world #Example
+
+anti-place-worlds:
+  - Arena #Example
+  - MinaPvP #Example
+  
 blocks:
   - TNT 
   - DIAMOND_BLOCK
+  - EMERALD_BLOCK
 ...
