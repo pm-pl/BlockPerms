@@ -43,7 +43,7 @@ class Main extends PluginBase implements Listener {
     }
 
     public function onPlace(BlockPlaceEvent $event): void { 
-	$config = $this->cfg->get();
+	      $config = $this->cfg->get();
         $player = $event->getPlayer();
         $bl = $event->getItem();
         $block = $event->getBlock()->getName();
@@ -55,16 +55,15 @@ class Main extends PluginBase implements Listener {
                 $player->sendMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("place-message")));
                  if($config("place-mode") === "popup") { 
                    $player->sendActionBarMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("place-message")));
+                   $event->cancel();
               }
             }
           }
         }
-            $event->cancel();
       }
-   }
- }
+
     public function onBreak(BlockBreakEvent $event): void { 
-	$config = $this->cfg->get();
+	      $config = $this->cfg->get();
         $player = $event->getPlayer();
         $bl = $event->getItem();
         $block = $event->getBlock()->getName();
@@ -76,11 +75,10 @@ class Main extends PluginBase implements Listener {
                 $player->sendMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
                  if($config("break-mode") === "popup") { 
                    $player->sendActionBarMessage($config("prefix") . " " . str_replace("{blockname}", $block, $config("break-message")));
-              }
-            }
+                   $event->cancel();
           }
         }
-            $event->cancel();
       }
-   }
- }
+    }
+  }
+}
