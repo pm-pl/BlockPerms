@@ -25,8 +25,8 @@ class Main extends PluginBase implements Listener {
             BlockBreak::class,
             BlockPlace::class
         ];
-        foreach($events as $ev) {
-            $this->getServer()->getPluginManager()->registerEvents(new $ev($this), $this);
+        foreach($events as $e) {
+            $this->getServer()->getPluginManager()->registerEvents(new $e($this), $this);
         }
     }
 

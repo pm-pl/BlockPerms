@@ -18,7 +18,7 @@ class BlockPlace implements Listener {
         $item = $event->getItem();
         $block = $event->getBlock()->getName();
         $world = $player->getWorld();
-        $name = str_replace(" ", "_", strtoupper($block->getName()));
+        $name = $block;
         $worldName = $world->getFolderName();
         
 		if ($player->hasPermission("blockperms.bypass")) return;
