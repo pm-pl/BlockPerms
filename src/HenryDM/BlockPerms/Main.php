@@ -26,7 +26,18 @@ class Main extends PluginBase implements Listener {
             BlockPlace::class
         ];
         foreach($events as $e) {
-                       
+            $this->getServer()->getPluginManager()->registerEvents(new $e($this), $this);
+        }
+    }
+
+    public function onLoad() : void {
+        self::$instance = $this;
+    }
+
+    public static function getInstance() : Main {
+        return self::$instance;
+    }
+
     public function getMainConfig() : Config {
         return $this->cfg;
     }
