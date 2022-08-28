@@ -13,6 +13,10 @@ use pocketmine\player\Player;
 
 class BlockPlace implements Listener { 
 
+    public function __construct(private Main $main) {
+        $this->main = $main;
+    }
+
     public function onPlace(BlockPlaceEvent $event) {
         $player = $event->getPlayer();
         $item = $event->getItem();

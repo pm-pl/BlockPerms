@@ -11,7 +11,11 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\player\Player;
 
 
-class BlockBreak implements Listener { 
+class BlockBreak implements Listener {
+     
+    public function __construct(private Main $main) {
+        $this->main = $main;
+    }
 
     public function onBreak(BlockBreakEvent $event) {
         $player = $event->getPlayer();
