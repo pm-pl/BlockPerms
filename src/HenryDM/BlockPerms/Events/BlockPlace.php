@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace HenryDM\BlockPerms\Events;
 
 use HenryDM\BlockPerms\Main;
-use HenryDM\BlockPerms\Listener;
+use pocketmine\event\Listener;
 
 use pocketmine\event\BlockPlaceEvent;
 use pocketmine\player\Player;
