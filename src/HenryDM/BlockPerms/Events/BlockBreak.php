@@ -24,10 +24,9 @@ class BlockBreak implements Listener {
 		if ($player->hasPermission("blockperms.bypass")) return;
         if (in_array($name, $this->getMain()->cfg->get("blocks") {
             if (in_array($worldName, $this->getMain()->cfg->get("anti-break-worlds"))) {
-                if($this->getMain()->cfg->get("alert-message", true)) {
+                if($this->getMain()->cfg->get("alert-message") === true) {
                     $player->sendActionBarMessage($this->getMain()->cfg->get("break-message"));
                     $event->cancel();
-
                 }
             }
         }             
