@@ -6,17 +6,9 @@ author: HenryDM
 description: Advanced plugin to prevent players from placing and breaking specific blocks
 website: https://github.com/Henry12960
 
-commands:
-  bpreload:
-    description: Reload The Plugin Config
-    default: op 
-    permission: blockperms.reload
 permissions:
   blockperms.bypass:
     description: ByPass The Block Check
-    default: op 
-  blockperms.reload:
-    description: Reload Plugin Configurations
     default: op 
   
 
