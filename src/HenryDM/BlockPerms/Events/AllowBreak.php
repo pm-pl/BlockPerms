@@ -27,7 +27,7 @@ class AllowBreak implements Listener {
         $blockName = $this->getMain()->cfg->get("allowed-blocks");
 
         if ($this->getMain()->cfg->get("allow-specific-break") === true) {
-           if(!$event->getBlock()->getID() == 59) return; 
+           if(!$event->getBlock()->getName() == $blockName) return; 
                  if (in_array($worldName, $this->getMain()->cfg->get("anti-break-worlds"))) {
                     $event->cancel();
                 }

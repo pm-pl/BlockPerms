@@ -41,4 +41,6 @@ blocks:
 # ========================  
 
 allow-specific-break: false
+allowed-blocks: 
+  - TNT
 ...
