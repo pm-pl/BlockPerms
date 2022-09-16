@@ -35,4 +35,10 @@ blocks:
   - TNT 
   - DIAMOND_BLOCK
   - EMERALD_BLOCK
+
+# ========================
+#  Specific block break
+# ========================  
+
+allow-specific-break: false
 ...
