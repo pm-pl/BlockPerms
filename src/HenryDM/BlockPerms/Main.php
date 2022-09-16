@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
 
         $events = [
             BlockBreak::class,
-            BlockPlace::class
+            BlockPlace::class,
             AllowBreak::class
         ];
         foreach($events as $e) {
