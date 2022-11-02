@@ -8,7 +8,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\player\Player;
 
-class BlockBreak implements Listener { 
+class BlocksPlace implements Listener { 
 
     public function __construct(private Main $main) {
         $this->main = $main;

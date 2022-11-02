@@ -8,7 +8,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\player\Player;
 
-class BlockBreak implements Listener { 
+class BreakPerms implements Listener { 
 
     public function __construct(private Main $main) {
         $this->main = $main;
@@ -19,7 +19,7 @@ class BlockBreak implements Listener {
 # ===========================================================        
         $player = $event->getPlayer();
         $item = $event->getItem();
-        $block = $event->getBlock()->getName();
+        $block = $event->getBlock();
         $world = $player->getWorld();
         $worldName = $world->getFolderName();
         $name = str_replace(" ", "_", strtoupper($block->getName()));
