@@ -1,38 +1,50 @@
-# BlockPerms
-Advanced plugin to prevent players from placing and breaking specific blocks
+## 📛 • Block Perms
 
-## Category
+| Version | Status | Date | 
+| --- | --- | --- |
+| 1.0.0 | stable-dev | 25/06/2022 |
+| 2.0.0 | update-dev | 29/08/2022 |
+| 3.0.0 | ultimate-dev | 01/11/2022 |
 
-PocketMine-MP plugins | PHP 8
+---
 
-## Requirements
+## 📫 • General:
 
-PocketMine-MP API 4.0.0 and PHP 8 or PHP 7
+ - Plugin Introduction: 
 
-## Overview
+   > This is an advanced plugin to manage blocking permissions on your minecraft server, this plugin has a moderator objective, you can use it to control the placement and breaking of blocks and restrict other things. Originally this plugin was updated from another api 3 plugin to api 4, hope you like it.
 
-**BlockPerms**: this is an advanced block protection plugin for PocketMine-MP that allows you to block players from placing and breaking specific blocks on your server, very useful to prevent players from abusing errors or failures that may occur to destroy your server. Made in lightweight code and fully customized for you!
+---
 
-**Henry Website:** https://github.com/Henry12960
+## 🔰 • Features 
+ 
+```
+🎯 • Restrict BlockPlace and BlockBreak
+💬 • Custom message types
+🌎 • Custom moderation worlds
+🔔 • Bypass moderation with permissions
+🚀 • Restrict specific blocks to Place or Break
+⭐ • Simple and open source code
 
-## Permissions
+```
+    
+---
 
-**Reload**: Permission To Reload The Plugin -> ***blockperms.reload***
+## 📜 • License
 
-**Bypass**: Permission to Bypass The Block Check -> ***bypass.permission***
+```
+   Copyright 2022 HenryDM
 
-## Features
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
-➔ Prevent players from placing and breaking specific blocks
+       http://www.apache.org/licenses/LICENSE-2.0
 
-➔ Fully customizable messages and prefix
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
 
-➔ Reload function without having to restart the server
-
-➔ Lightweight and effective code against RAM consumption
-
-## Warning
-
-***If you have an error or suggestion open a problem!***
-
-***This Plugin uses the New API. You can't install it on old versions of PocketMine.***
+```

@@ -1,46 +1,49 @@
 ---
-#  ____  _            _      _____                        
-# |  _ \| |          | |    |  __ \                       
-# | |_) | | ___   ___| | __ | |__) |__ _ __ _ __ ___  ___ 
-# |  _ <| |/ _ \ / __| |/ / |  ___/ _ \ '__| '_ ` _ \/ __|
-# | |_) | | (_) | (__|   <  | |  |  __/ |  | | | | | \__ \
-# |____/|_|\___/ \___|_|\_\ |_|   \___|_|  |_| |_| |_|___/
-#                                                                                                        
-# If you want report bugs: https://github.com/Henry12960/BlockPerms/issues
+# ===================
+#     BLOCK PERMS
+# ===================
+# 1. Advanced plugin to prevent players from placing and breaking specific blocks
+# 2. If you see errors, report here: https://github.com/Henry12960/BlockPerms/issues/new
+# 3. Plugin made by Henry Thierry [HenryDM] 
+# 4. Henry's Website: https://github.com/Henry12960
 
-# ========================
-#    General Messages
-# ========================
+# ===================
+#      GENERAL
+# ===================
+# 1. You can use 'message' or 'popup' in "messages-type"
 
-# Warning message if blocked break or placing blocks
-alert-message: true
+messages-type: "popup"
+blocks: ["DIAMOND", "EMERALD_BLOCK"]
+specific-blocks: ["EMERALD", "IRON"]
 
-# If you set to true add Place and Break messages
-place-message: "§cYou can't put it here!"
-break-message: "§cYou can't break it here!"
+block-perms-worlds: ["World", "BlockPerms"]
+specific-blocks-worlds: ["Survival", "BlockPerms"]
 
-# ========================
-#   Block and World list 
-# ========================
+# ===================
+#    PLACE & BREAK
+# ===================
+# 1. Use {block} to get block name and & to get minecraft color codes.
+# 2. If you set 'break-perms' or 'place-perms' to true can disable the function.
 
-anti-break-worlds:
-  - Lobby #Example
-  - world #Example
+place-perms: true
+break-perms: true
 
-anti-place-worlds:
-  - Arena #Example
-  - MinaPvP #Example
-  
-blocks:
-  - TNT 
-  - DIAMOND_BLOCK
-  - EMERALD_BLOCK
+break-alert-message: true
+place-alert-message: true
 
-# ========================
-#  Specific block break
-# ========================  
+place-message: "You can't place {block} here!"
+break-message: "You can't break {block} here!"
 
-allow-specific-break: false
-allowed-blocks: 
-  - TNT
+# ===================
+#      SPECIFIC
+# ===================
+# 1. Use {block} to get block name and & to get minecraft color codes.
+# 2. INFO: This function if set to true deny player to break or place a specific block!
+
+
+break-specific-block: false
+place-specific-block: false
+
+specific-break-message: "You can't break this block here"
+specific-place-message: "You can't place this block here"
 ...

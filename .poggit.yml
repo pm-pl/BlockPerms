@@ -5,4 +5,5 @@ branches:
 projects:
   BlockPerms:
     path: ""
+    icon: "BlockPerms.png"
 ...
