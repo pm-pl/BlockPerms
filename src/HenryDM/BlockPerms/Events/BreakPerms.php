@@ -35,12 +35,12 @@ class BreakPerms implements Listener {
                 if(in_array($name, $this->main->cfg->get("blocks", []))) {
                     $event->cancel();
 
-                    if($this->main->get("place-alert-message") === true) {
-                        if($this->main->get("messages-type") === "popup") {
+                    if($this->main->cfg->get("place-alert-message") === true) {
+                        if($this->main->cfg->get("messages-type") === "popup") {
                             $player->sendPopup($message);
                         }
 
-                        if($this->main->get("messages-type") === "message") {
+                        if($this->main->cfg->get("messages-type") === "message") {
                             $player->sendMessage($message);
                         }
                     }
