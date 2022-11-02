@@ -38,12 +38,11 @@ break-message: "You can't break {block} here!"
 #      SPECIFIC
 # ===================
 # 1. Use {block} to get block name and & to get minecraft color codes.
-# 2. INFO: This function if set to true deny player to break or place a specific block!
-
+# 2. INFO: This function if set to true allow player to break or place a specific block!
 
 break-specific-block: false
 place-specific-block: false
 
-specific-break-message: "You can't break this block here"
-specific-place-message: "You can't place this block here"
+place-specific-block-message: "-1 {block}"
+break-specific-block-message: "+1 {block}"
 ...

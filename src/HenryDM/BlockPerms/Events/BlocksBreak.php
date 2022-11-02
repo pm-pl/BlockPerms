@@ -34,7 +34,9 @@ class BlocksBreak implements Listener {
 
             if(in_array($worldName, $this->main->cfg->get("specific-blocks-worlds", []))) {
                 if(in_array($name, $this->main->cfg->get("specific-blocks", []))) {
-                    if($block != $blockN) {
+                    if($block === $blockN) {
+                        $player->sendPopup($this->main->cfg->("break-specific-block-message"));
+                    } else {
                         $event->cancel();
                     }
                 }
