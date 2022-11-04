@@ -6,9 +6,10 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\utils\Config;
 
-use HenryDM\BlockPerms\Events\BlockBreak;
-use HenryDM\BlockPerms\Events\BlockPlace;
-use HenryDM\BlockPerms\Events\AllowBreak; # In Test
+use HenryDM\BlockPerms\Events\BlocksBreak;
+use HenryDM\BlockPerms\Events\BlocksPlace;
+use HenryDM\BlockPerms\Events\BreakPerms;
+use HenryDM\BlockPerms\Events\PlacePerms;
 
 class Main extends PluginBase implements Listener {
 
@@ -23,9 +24,10 @@ class Main extends PluginBase implements Listener {
         $this->cfg = $this->getConfig();
 
         $events = [
-            BlockBreak::class,
-            BlockPlace::class,
-            AllowBreak::class
+            BlocksBreak::class,
+            BlocksPlace::class,
+            BreakPerms::class,
+            PlacePerms::class
         ];
         foreach($events as $e) {
             $this->getServer()->getPluginManager()->registerEvents(new $e($this), $this);
